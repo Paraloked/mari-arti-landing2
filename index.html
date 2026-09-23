@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>МариАрти — Студия дизайна интерьеров</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Навигация -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#" class="brand">
+        <img src="images/logo.png" alt="МариАрти Логотип" class="brand-logo" onerror="this.style.display='none'">
+        <div class="brand-text">
+          <span class="brand-title">МАРИ <em>Арти</em></span>
+          <span class="brand-subtitle">ДИЗАЙН ИНТЕРЬЕРОВ</span>
+        </div>
+      </a>
+      
+      <nav class="nav-menu" id="navMenu">
+        <a href="#about" class="nav-link">О студии</a>
+        <a href="#services" class="nav-link">Услуги</a>
+        <a href="#portfolio" class="nav-link">Проекты</a>
+        <a href="#contact" class="nav-link">Контакты</a>
+      </nav>
+
+      <button class="burger" id="burgerBtn" aria-label="Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Главный экран (Hero) -->
+  <section class="hero" id="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="section-tag">ДИЗАЙН ИНТЕРЬЕРОВ</span>
+        <h1 class="hero-title">
+          ИСКУССТВО<br>
+          СОЗДАВАТЬ<br>
+          <span class="accent">ПРОСТРАНСТВА</span><br>
+          ВАШЕЙ МЕЧТЫ
+        </h1>
+        <p class="hero-subtitle">Дизайн-проекты, продуманные до мелочей</p>
+        <a href="#portfolio" class="btn-primary">
+          Смотреть портфолио <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Блок 01: О студии -->
+  <section class="about section-padding" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text-col">
+          <span class="section-num">01 / О СТУДИИ</span>
+          <h2 class="section-title">О СТУДИИ <span class="accent">МАРИ АРТИ</span></h2>
+          <p class="lead-text">
+            Мы создаём современные интерьеры, в которых эстетика работает вместе с удобством.
+          </p>
+          <p class="body-text">
+            <strong>МАРИ Арти</strong> — студия дизайна интерьеров, которая помогает превратить идеи о будущем доме в цельное пространство. От первой концепции до визуализации — всё продумываем до мелочей.
+          </p>
+
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="stat-num">10+</span>
+              <span class="stat-label">лет в дизайне</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">100+</span>
+              <span class="stat-label">реализованных идей</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">360°</span>
+              <span class="stat-label">внимания к деталям</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual-col">
+          <div class="about-card-banner">
+            <img src="images/living-room.jpg" alt="Интерьер МариАрти" class="banner-bg">
+            <div class="mascot-badge">
+              <img src="images/mascot.png" alt="Маскот студии" class="mascot-img" onerror="this.style.display='none'">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Блок 02: Услуги -->
+  <section class="services section-padding" id="services">
+    <div class="container">
+      <span class="section-num">02 / ЧТО МЫ ДЕЛАЕМ</span>
+      <h2 class="section-title">НАШИ <span class="accent">УСЛУГИ</span></h2>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <h3 class="service-title">Дизайн-проект</h3>
+          <p class="service-desc">
+            Планировочные решения, стилистика, чертежи и комплектация будущего интерьера.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <h3 class="service-title">3D-визуализация</h3>
+          <p class="service-desc">
+            Фотореалистичные изображения, которые позволяют увидеть пространство ещё до начала ремонта.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <h3 class="service-title">Авторский надзор</h3>
+          <p class="service-desc">
+            Контроль реализации проекта и сопровождение на ключевых этапах отделочных работ.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Блок 03: Портфолио -->
+  <section class="portfolio section-padding" id="portfolio">
+    <div class="container">
+      <span class="section-num">03 / ПОРТФОЛИО</span>
+      <h2 class="section-title">ПРИМЕРЫ <span class="accent">РАБОТ</span></h2>
+
+      <div class="portfolio-grid">
+        <article class="portfolio-item" data-title="Просторная гостиная с зоной отдыха" data-src="images/living-room.jpg">
+          <div class="portfolio-thumb">
+            <img src="images/living-room.jpg" alt="Гостиная">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Гостиная</span>
+              <h4 class="portfolio-name">Эстетика света и дерева</h4>
+            </div>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-title="Уютная спальня с молдингами" data-src="images/bedroom.jpg">
+          <div class="portfolio-thumb">
+            <img src="images/bedroom.jpg" alt="Спальня">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Спальня</span>
+              <h4 class="portfolio-name">Глубокие оттенки и мягкий свет</h4>
+            </div>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-title="Кухня-столовая с панорамными окнами" data-src="images/kitchen.jpg">
+          <div class="portfolio-thumb">
+            <img src="images/kitchen.jpg" alt="Кухня">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Кухня-столовая</span>
+              <h4 class="portfolio-name">Природные фактуры и биофилия</h4>
+            </div>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-title="Санузел с вертикальным озеленением" data-src="images/bathroom.jpg">
+          <div class="portfolio-thumb">
+            <img src="images/bathroom.jpg" alt="Санузел">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Санузел</span>
+              <h4 class="portfolio-name">Оазис релаксации и латунь</h4>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Блок 04: Контакты / Заявка -->
+  <section class="contact section-padding" id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <div class="contact-info">
+          <span class="section-num">04 / СВЯЗАТЬСЯ</span>
+          <h2 class="section-title">ОБСУДИТЬ <span class="accent">ВАШ ПРОЕКТ</span></h2>
+          <p class="body-text">
+            Оставьте заявку, и мы свяжемся с вами в течение дня для первичной консультации и расчёта стоимости.
+          </p>
+          <div class="contact-details">
+            <p><strong>Email:</strong> info@mariarti.ru</p>
+            <p><strong>Телефон:</strong> +7 (999) 000-00-00</p>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" placeholder="Ваше имя" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" placeholder="Телефон" required>
+          </div>
+          <div class="form-group">
+            <textarea rows="3" placeholder="Расскажите вкратце о вашем объекте (площадь, город)..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-width">Отправить заявку →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-logo">
+        <span class="brand-title">МАРИ <em>Арти</em></span>
+        <span class="footer-sub">Студия дизайна интерьеров</span>
+      </div>
+      <p class="copyright">© 2026 МариАрти. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <!-- Модальное окно просмотра фото (Lightbox) -->
+  <div class="modal" id="modal">
+    <span class="modal-close" id="modalClose">&times;</span>
+    <div class="modal-content">
+      <img id="modalImg" src="" alt="Просмотр">
+      <div class="modal-caption" id="modalCaption"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
