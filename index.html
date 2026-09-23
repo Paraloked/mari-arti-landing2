@@ -1,256 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>МариАрти — Студия дизайна интерьеров</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>МАРИ Арти — дизайн интерьеров</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#111;--card:#191919;--text:#f4f0eb;--muted:#aaa39d;--line:#3b3733;--a:#e36b47;--a2:#ff8a64;--max:1220px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,sans-serif;line-height:1.5}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}.serif{font-family:"Playfair Display",Georgia,serif}.a{color:var(--a)}
+header{position:fixed;z-index:10;inset:0 0 auto;background:#101010d9;backdrop-filter:blur(16px);border-bottom:1px solid #ffffff12}.nav{height:82px;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:12px}.mark{width:48px;height:48px;border:1px solid var(--a);border-radius:50%;display:grid;place-items:center;font-family:"Playfair Display";font-size:21px}.brand b{display:block;font-family:"Playfair Display";font-size:19px;letter-spacing:.03em}.brand small{font-size:8px;letter-spacing:.18em;color:#aaa}.links{display:flex;gap:32px;font-size:13px;color:#d8d1cc}.links a{padding:31px 0;position:relative}.links a:after{content:"";position:absolute;left:0;right:0;bottom:20px;height:1px;background:var(--a);transform:scaleX(0);transition:.2s}.links a:hover:after{transform:scaleX(1)}.navbtn{border:1px solid #5c514a;border-radius:7px;padding:10px 16px;font-size:12px}.navbtn:hover{border-color:var(--a)}
+.hero{min-height:760px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,#111 0%,#111 35%,#111b 52%,#1110 100%),url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=85") center/cover}.hero:after{content:"";position:absolute;inset:auto 0 0;height:140px;background:linear-gradient(transparent,var(--bg))}.hero .wrap{position:relative;z-index:1}.eyebrow,.kicker{color:var(--a);font-size:11px;letter-spacing:.16em;font-weight:700;text-transform:uppercase}.hero h1{font-size:clamp(48px,6.2vw,88px);line-height:.94;font-weight:500;letter-spacing:-.045em;margin:18px 0 26px;max-width:720px}.hero p{color:#c4bdb7;max-width:500px;font-size:14px;margin-bottom:32px}.actions{display:flex;gap:12px}.btn{display:inline-flex;gap:24px;align-items:center;padding:14px 18px;border-radius:7px;font-size:12px;font-weight:700;transition:.2s}.primary{background:var(--a)}.primary:hover{background:var(--a2);transform:translateY(-2px)}.ghost{border:1px solid #635951}.ghost:hover{border-color:var(--a)}
+section{padding:100px 0}.head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}.title{font-family:"Playfair Display";font-size:clamp(38px,4.4vw,60px);font-weight:500;line-height:1;margin:8px 0 0}.desc{color:var(--muted);font-size:13px;max-width:430px}
+.about{background:linear-gradient(#111,#151515)}.aboutgrid{display:grid;grid-template-columns:.75fr 1.25fr;gap:72px;align-items:center}.about p{color:#aaa39d;font-size:13px;max-width:470px}.about .lead{color:#e0dad4;font-size:17px;line-height:1.45}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:38px}.stat{border-top:1px solid var(--line);padding-top:15px}.stat strong{display:block;font:500 34px "Playfair Display"}.stat span{font-size:10px;color:#88817b}.photo{height:440px;border-radius:10px;overflow:hidden;background:url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=85") center/cover;position:relative}.photo:after{content:"МАРИ\AАРТИ";white-space:pre;position:absolute;right:24px;bottom:20px;font:500 32px/.8 "Playfair Display";text-align:right;text-shadow:0 4px 20px #000}
+.services{padding-top:15px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:25px;min-height:220px;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#69574e}.ico{width:36px;height:36px;border:1px solid #80513f;color:var(--a);border-radius:50%;display:grid;place-items:center;margin-bottom:35px}.card h3{font-size:16px;margin:0 0 9px}.card p{color:#908983;font-size:11px;max-width:280px}
+.portfolio{background:#0f0f0f}.grid{display:grid;grid-template-columns:1.6fr .85fr .85fr;grid-auto-rows:245px;gap:14px}.project{position:relative;overflow:hidden;border-radius:10px;cursor:pointer}.project:first-child{grid-row:span 2}.project:nth-child(4){grid-column:span 2}.project img{width:100%;height:100%;object-fit:cover;transition:.5s;filter:saturate(.82)}.project:hover img{transform:scale(1.05);filter:saturate(1)}.project:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,#000c)}.meta{position:absolute;z-index:1;left:20px;bottom:18px}.meta span{color:var(--a);font-size:9px;letter-spacing:.12em;text-transform:uppercase}.meta h3{margin:4px 0 0;font:500 23px "Playfair Display"}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.step{padding:28px 22px;border-right:1px solid var(--line)}.step:last-child{border:0}.num{font:500 38px "Playfair Display";color:var(--a);margin-bottom:25px}.step h3{font-size:14px;margin:0 0 8px}.step p{color:#8e8882;font-size:11px;margin:0}
+.cta{padding-top:80px}.box{border:1px solid #403a36;border-radius:14px;padding:65px 70px;background:radial-gradient(circle at 85% 35%,#e36b4738,transparent 30%),#171717}.box h2{font:500 clamp(40px,5vw,66px)/1 "Playfair Display";max-width:780px;margin:8px 0 16px}.box p{color:#9d958f;font-size:13px;max-width:550px;margin-bottom:28px}.footer{border-top:1px solid var(--line);padding:28px 0;color:#77706a;font-size:10px}.foot{display:flex;justify-content:space-between}
+.modal{display:none;position:fixed;z-index:30;inset:0;background:#000d;backdrop-filter:blur(8px);place-items:center;padding:20px}.modal.open{display:grid}.modalbox{width:min(900px,100%);background:#181818;border:1px solid #403a36;border-radius:12px;overflow:hidden}.modalbox img{width:100%;height:480px;object-fit:cover}.modaltext{padding:20px}.modaltext h3{font:500 30px "Playfair Display";margin:0}.modaltext p{color:#999;font-size:12px}.close{position:fixed;top:18px;right:22px;width:40px;height:40px;border:1px solid #555;border-radius:50%;background:#171717;color:#fff;font-size:22px;cursor:pointer}
+@media(max-width:900px){.links{display:none}.navbtn{display:none}.hero{min-height:700px}.aboutgrid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.step:nth-child(2){border-right:0}.grid{grid-template-columns:1fr 1fr;grid-auto-rows:220px}.project:first-child{grid-row:auto}.project:nth-child(4){grid-column:auto}}
+@media(max-width:600px){.wrap{width:calc(100% - 30px)}section{padding:75px 0}.hero{background-position:62% center}.hero h1{font-size:47px}.head{display:block}.desc{margin-top:18px}.stats{gap:10px}.stat strong{font-size:27px}.grid{grid-template-columns:1fr;grid-auto-rows:270px}.steps{grid-template-columns:1fr}.step,.step:nth-child(2){border-right:0;border-bottom:1px solid var(--line)}.box{padding:42px 28px}.foot{display:block}.foot div+div{margin-top:8px}.modalbox img{height:270px}}
+</style>
 </head>
 <body>
-
-  <!-- Навигация -->
-  <header class="header">
-    <div class="container nav-container">
-      <a href="#" class="brand">
-        <img src="images/logo.png" alt="МариАрти Логотип" class="brand-logo" onerror="this.style.display='none'">
-        <div class="brand-text">
-          <span class="brand-title">МАРИ <em>Арти</em></span>
-          <span class="brand-subtitle">ДИЗАЙН ИНТЕРЬЕРОВ</span>
-        </div>
-      </a>
-      
-      <nav class="nav-menu" id="navMenu">
-        <a href="#about" class="nav-link">О студии</a>
-        <a href="#services" class="nav-link">Услуги</a>
-        <a href="#portfolio" class="nav-link">Проекты</a>
-        <a href="#contact" class="nav-link">Контакты</a>
-      </nav>
-
-      <button class="burger" id="burgerBtn" aria-label="Меню">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Главный экран (Hero) -->
-  <section class="hero" id="hero">
-    <div class="container hero-container">
-      <div class="hero-content">
-        <span class="section-tag">ДИЗАЙН ИНТЕРЬЕРОВ</span>
-        <h1 class="hero-title">
-          ИСКУССТВО<br>
-          СОЗДАВАТЬ<br>
-          <span class="accent">ПРОСТРАНСТВА</span><br>
-          ВАШЕЙ МЕЧТЫ
-        </h1>
-        <p class="hero-subtitle">Дизайн-проекты, продуманные до мелочей</p>
-        <a href="#portfolio" class="btn-primary">
-          Смотреть портфолио <span class="arrow">→</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Блок 01: О студии -->
-  <section class="about section-padding" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-text-col">
-          <span class="section-num">01 / О СТУДИИ</span>
-          <h2 class="section-title">О СТУДИИ <span class="accent">МАРИ АРТИ</span></h2>
-          <p class="lead-text">
-            Мы создаём современные интерьеры, в которых эстетика работает вместе с удобством.
-          </p>
-          <p class="body-text">
-            <strong>МАРИ Арти</strong> — студия дизайна интерьеров, которая помогает превратить идеи о будущем доме в цельное пространство. От первой концепции до визуализации — всё продумываем до мелочей.
-          </p>
-
-          <div class="stats-row">
-            <div class="stat-item">
-              <span class="stat-num">10+</span>
-              <span class="stat-label">лет в дизайне</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-num">100+</span>
-              <span class="stat-label">реализованных идей</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-num">360°</span>
-              <span class="stat-label">внимания к деталям</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-visual-col">
-          <div class="about-card-banner">
-            <img src="images/living-room.jpg" alt="Интерьер МариАрти" class="banner-bg">
-            <div class="mascot-badge">
-              <img src="images/mascot.png" alt="Маскот студии" class="mascot-img" onerror="this.style.display='none'">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Блок 02: Услуги -->
-  <section class="services section-padding" id="services">
-    <div class="container">
-      <span class="section-num">02 / ЧТО МЫ ДЕЛАЕМ</span>
-      <h2 class="section-title">НАШИ <span class="accent">УСЛУГИ</span></h2>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-              <polyline points="9 22 9 12 15 12 15 22"></polyline>
-            </svg>
-          </div>
-          <h3 class="service-title">Дизайн-проект</h3>
-          <p class="service-desc">
-            Планировочные решения, стилистика, чертежи и комплектация будущего интерьера.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-              <polyline points="2 17 12 22 22 17"></polyline>
-              <polyline points="2 12 12 17 22 12"></polyline>
-            </svg>
-          </div>
-          <h3 class="service-title">3D-визуализация</h3>
-          <p class="service-desc">
-            Фотореалистичные изображения, которые позволяют увидеть пространство ещё до начала ремонта.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="12" y1="8" x2="12" y2="12"></line>
-              <line x1="12" y1="16" x2="12.01" y2="16"></line>
-            </svg>
-          </div>
-          <h3 class="service-title">Авторский надзор</h3>
-          <p class="service-desc">
-            Контроль реализации проекта и сопровождение на ключевых этапах отделочных работ.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Блок 03: Портфолио -->
-  <section class="portfolio section-padding" id="portfolio">
-    <div class="container">
-      <span class="section-num">03 / ПОРТФОЛИО</span>
-      <h2 class="section-title">ПРИМЕРЫ <span class="accent">РАБОТ</span></h2>
-
-      <div class="portfolio-grid">
-        <article class="portfolio-item" data-title="Просторная гостиная с зоной отдыха" data-src="images/living-room.jpg">
-          <div class="portfolio-thumb">
-            <img src="images/living-room.jpg" alt="Гостиная">
-            <div class="portfolio-overlay">
-              <span class="portfolio-tag">Гостиная</span>
-              <h4 class="portfolio-name">Эстетика света и дерева</h4>
-            </div>
-          </div>
-        </article>
-
-        <article class="portfolio-item" data-title="Уютная спальня с молдингами" data-src="images/bedroom.jpg">
-          <div class="portfolio-thumb">
-            <img src="images/bedroom.jpg" alt="Спальня">
-            <div class="portfolio-overlay">
-              <span class="portfolio-tag">Спальня</span>
-              <h4 class="portfolio-name">Глубокие оттенки и мягкий свет</h4>
-            </div>
-          </div>
-        </article>
-
-        <article class="portfolio-item" data-title="Кухня-столовая с панорамными окнами" data-src="images/kitchen.jpg">
-          <div class="portfolio-thumb">
-            <img src="images/kitchen.jpg" alt="Кухня">
-            <div class="portfolio-overlay">
-              <span class="portfolio-tag">Кухня-столовая</span>
-              <h4 class="portfolio-name">Природные фактуры и биофилия</h4>
-            </div>
-          </div>
-        </article>
-
-        <article class="portfolio-item" data-title="Санузел с вертикальным озеленением" data-src="images/bathroom.jpg">
-          <div class="portfolio-thumb">
-            <img src="images/bathroom.jpg" alt="Санузел">
-            <div class="portfolio-overlay">
-              <span class="portfolio-tag">Санузел</span>
-              <h4 class="portfolio-name">Оазис релаксации и латунь</h4>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Блок 04: Контакты / Заявка -->
-  <section class="contact section-padding" id="contact">
-    <div class="container">
-      <div class="contact-box">
-        <div class="contact-info">
-          <span class="section-num">04 / СВЯЗАТЬСЯ</span>
-          <h2 class="section-title">ОБСУДИТЬ <span class="accent">ВАШ ПРОЕКТ</span></h2>
-          <p class="body-text">
-            Оставьте заявку, и мы свяжемся с вами в течение дня для первичной консультации и расчёта стоимости.
-          </p>
-          <div class="contact-details">
-            <p><strong>Email:</strong> info@mariarti.ru</p>
-            <p><strong>Телефон:</strong> +7 (999) 000-00-00</p>
-          </div>
-        </div>
-
-        <form class="contact-form" id="contactForm">
-          <div class="form-group">
-            <input type="text" placeholder="Ваше имя" required>
-          </div>
-          <div class="form-group">
-            <input type="tel" placeholder="Телефон" required>
-          </div>
-          <div class="form-group">
-            <textarea rows="3" placeholder="Расскажите вкратце о вашем объекте (площадь, город)..."></textarea>
-          </div>
-          <button type="submit" class="btn-primary full-width">Отправить заявку →</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Футер -->
-  <footer class="footer">
-    <div class="container footer-content">
-      <div class="footer-logo">
-        <span class="brand-title">МАРИ <em>Арти</em></span>
-        <span class="footer-sub">Студия дизайна интерьеров</span>
-      </div>
-      <p class="copyright">© 2026 МариАрти. Все права защищены.</p>
-    </div>
-  </footer>
-
-  <!-- Модальное окно просмотра фото (Lightbox) -->
-  <div class="modal" id="modal">
-    <span class="modal-close" id="modalClose">&times;</span>
-    <div class="modal-content">
-      <img id="modalImg" src="" alt="Просмотр">
-      <div class="modal-caption" id="modalCaption"></div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<header><div class="wrap nav"><a class="logo" href="#top"><div class="mark">MА</div><div class="brand"><b>МАРИ <span class="a">Арти</span></b><small>ДИЗАЙН ИНТЕРЬЕРОВ</small></div></a><nav class="links"><a href="#studio">О студии</a><a href="#services">Услуги</a><a href="#projects">Проекты</a><a href="#contact">Контакты</a></nav><a class="navbtn" href="#contact">Обсудить проект ↗</a></div></header>
+<main id="top">
+<section class="hero"><div class="wrap"><div class="eyebrow">Дизайн интерьеров</div><h1 class="serif">Искусство создавать <span class="a">пространства</span> вашей мечты</h1><p>Дизайн-проекты, продуманные до мелочей — от первой идеи до финального воплощения.</p><div class="actions"><a class="btn primary" href="#projects">Смотреть портфолио →</a><a class="btn ghost" href="#studio">О студии ↓</a></div></div></section>
+<section id="studio" class="about"><div class="wrap aboutgrid"><div><div class="kicker">01 / О студии</div><h2 class="title">О студии <span class="a">МАРИ АРТИ</span></h2><p class="lead">Мы создаём современные интерьеры, в которых эстетика работает вместе с удобством.</p><p>МАРИ Арти — студия дизайна интерьеров, которая помогает превратить идеи о будущем доме в цельное пространство. От первой концепции до визуализации — всё продумываем до мелочей.</p><div class="stats"><div class="stat"><strong>10+</strong><span>лет в дизайне</span></div><div class="stat"><strong>100+</strong><span>реализованных идей</span></div><div class="stat"><strong>360°</strong><span>внимания к деталям</span></div></div></div><div class="photo"></div></div></section>
+<section id="services"><div class="wrap"><div class="head"><div><div class="kicker">02 / Что мы делаем</div><h2 class="title">Наши <span class="a">услуги</span></h2></div><div class="desc">Собираем эстетику, функциональность и характер клиента в единый интерьер.</div></div><div class="cards"><article class="card"><div class="ico">⌂</div><h3>Дизайн-проект</h3><p>Планировочные решения, стилистика, чертежи и комплектация будущего интерьера.</p></article><article class="card"><div class="ico">◇</div><h3>3D-визуализация</h3><p>Фотореалистичные изображения, которые позволяют увидеть пространство ещё до ремонта.</p></article><article class="card"><div class="ico">✦</div><h3>Авторский надзор</h3><p>Контроль реализации проекта и сопровождение на ключевых этапах работ.</p></article></div></div></section>
+<section id="projects" class="portfolio"><div class="wrap"><div class="head"><div><div class="kicker">03 / Портфолио</div><h2 class="title">Примеры <span class="a">работ</span></h2></div><div class="desc">Избранные проекты студии — разные задачи, единое внимание к деталям.</div></div><div class="grid">
+<article class="project" data-t="Тёплый минимализм" data-d="Квартира с мягкой палитрой, натуральным деревом и выразительной архитектурой света." data-i="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85"><div class="meta"><span>Квартира · 128 м²</span><h3>Тёплый минимализм</h3></div></article>
+<article class="project" data-t="Тихая геометрия" data-d="Спокойный современный интерьер с акцентом на фактуры и ритм линий." data-i="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85"><div class="meta"><span>Апартаменты · 92 м²</span><h3>Тихая геометрия</h3></div></article>
+<article class="project" data-t="Свет и воздух" data-d="Светлая композиция для семейного пространства с акцентом на естественный свет." data-i="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85"><div class="meta"><span>Дом · 210 м²</span><h3>Свет и воздух</h3></div></article>
+<article class="project" data-t="Глубокий шоколад" data-d="Контрастный интерьер с тёмным деревом, камнем и мягким текстилем." data-i="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1600&q=85"><img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1600&q=85"><div class="meta"><span>Пентхаус · 156 м²</span><h3>Глубокий шоколад</h3></div></article>
+</div></div></section>
+<section><div class="wrap"><div class="head"><div><div class="kicker">04 / Как мы работаем</div><h2 class="title">От идеи <span class="a">до дома</span></h2></div><div class="desc">Понятный процесс без лишней суеты — с прозрачными этапами и вниманием к деталям.</div></div><div class="steps"><div class="step"><div class="num">01</div><h3>Знакомство</h3><p>Обсуждаем задачи, привычки, пожелания и будущий образ пространства.</p></div><div class="step"><div class="num">02</div><h3>Концепция</h3><p>Формируем планировку, стиль, материалы и настроение интерьера.</p></div><div class="step"><div class="num">03</div><h3>Проект</h3><p>Готовим чертежи, визуализации, спецификации и рабочие решения.</p></div><div class="step"><div class="num">04</div><h3>Реализация</h3><p>Сопровождаем проект и следим, чтобы задумка сохранилась в деталях.</p></div></div></div></section>
+<section id="contact" class="cta"><div class="wrap"><div class="box"><div class="kicker">05 / Контакты</div><h2>Создадим интерьер, который <span class="a">говорит о вас</span></h2><p>Финальный блок пока только визуальный — форму обратной связи можно подключить следующим этапом.</p><a class="btn primary" href="mailto:hello@mariarti.ru">Написать студии →</a></div></div></section>
+</main>
+<footer class="footer"><div class="wrap foot"><div>© 2026 МАРИ Арти · Студия дизайна интерьеров</div><div>Современные интерьеры · Проектирование · Реализация</div></div></footer>
+<div class="modal" id="modal"><button class="close">×</button><div class="modalbox"><img id="mi"><div class="modaltext"><div class="kicker">Проект МАРИ Арти</div><h3 id="mt"></h3><p id="md"></p></div></div></div>
+<script>
+const m=document.getElementById("modal"),mi=document.getElementById("mi"),mt=document.getElementById("mt"),md=document.getElementById("md");
+document.querySelectorAll(".project").forEach(x=>x.onclick=()=>{mi.src=x.dataset.i;mt.textContent=x.dataset.t;md.textContent=x.dataset.d;m.classList.add("open")});
+document.querySelector(".close").onclick=()=>m.classList.remove("open");m.onclick=e=>{if(e.target===m)m.classList.remove("open")};document.onkeydown=e=>{if(e.key==="Escape")m.classList.remove("open")};
+</script>
+</body></html>
